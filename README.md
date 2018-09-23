@@ -9,4 +9,6 @@ The first mode is the 'set mode'. In this mode the number divisions which has be
 
 The second mode is the 'run mode'. In this mode the dividing head is incremented each time the button is pushed. Again the increment depends on the toggle switch selection. The display shows the division number the dividing head is currently at, starting at 0 and going up to the number n, which is one less than the number of divisions chosen in set mode. The number on the display wraps around when this range is incremented past. 
 
-The program can be compiled in the Arduino IDE
+In some cases the number of divisions selected will not be a factor in the total number of steps per rotation of the dividing head. As the uploaded code is set, there is `step_rot = 400` and `reduction = 180` resulting in 400 x 180 = 72,000 steps per rotation of the dividing head. Say that we select 23 divisions to be indexed (which is a prime number). Then 72,000 / 23 = 3130.43478….. which is not an integer value, meaning that a partial number of steps is required. This is dealt with approximately by moving to the closest full step to the exact fractional number required. The program is arranged so that the error in doing this does not accumulate. 72,000 is large enough that this error should not be significant for most applications. One can always arrange to use a larger number for greater accuracy.
+
+The program is straightforward to compile in the Arduino IDE
