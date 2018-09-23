@@ -1,5 +1,5 @@
 // Code to run a stepper motor driven dividing head using an 
-// Arduino Uno with a display formed from 3 x 7 segment digit displays,
+// Arduino Uno with a display made from 3 x 7 segment digit displays,
 // driven by 3 x 4511 decoder integrated circuits. The constant 'reduction'
 // is the mechanical reduction in the dividing head, and the constant 'step_rot'
 // is the number of steps per rotation of the stepper motor.
@@ -7,18 +7,10 @@
 // 'mode_pin', 'tog1_pin', 'tog2_pin', and 'fwd_tog_pin' to control
 // the dividing head.
 //
-// enable serial port access: sudo chmod a+rw /dev/ttyACM0
-//
-// connect terminal for printing: screen /dev/ttyACM0
-//
-// specify Arduino pins
-// can use pins 0 - 19
-//  If you must use pin 13 as a digital input, set its pinMode() to INPUT and use an external pull down resistor. 
-
 // output pins
 const int step_pin = 18;
 const int fwd_pin = 19;
-const int A_pin = 2;   // the four inputs for 4511 decoders, A, B, C & D
+const int A_pin = 2;   // the four inputs for the 4511 decoders, A, B, C & D
 const int B_pin = 3;   // A is the least significant bit
 const int C_pin = 4;
 const int D_pin = 5;
