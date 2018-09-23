@@ -8,3 +8,5 @@ The controller may be set in either of two modes using the `mode_pin` toggle swi
 The first mode is the 'set mode'. In this mode the number divisions which has been selected is displayed. If the button is pushed the number is incremented by an amount dependent on the other toggle switches. Any integer value from 2 up to 999 may be selected. If the increment goes past this range the number wraps around.
 
 The second mode is the 'run mode'. In this mode the dividing head is incremented each time the button is pushed. Again the increment depends on the toggle switch selection. The display shows the division number the dividing head is currently at, starting at 0 and going up to the number n, which is one less than the number of divisions chosen in set mode. The number on the display wraps around when this range is incremented past. 
+
+The program can be compiled in the Arduino IDE
